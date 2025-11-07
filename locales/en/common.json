@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Meet FullstackAgent: Your AI Full-Stack Engineer.",
+    "subtitle": "An AI partner that truly writes, configures, and deploys full-stack applications.",
+    "description": "It's not an assistant. It's an engineer. Just tell it what you want to build through the terminal in natural language—and watch it create a complete full-stack application integrated with Claude, Next.js, shadcn/ui, and PostgreSQL right before your eyes.",
+    "cta": {
+      "primary": "Launch Your Sandbox Now",
+      "secondary": "View GitHub Repository"
+    }
+  },
+  "problem": {
+    "title": "The Problem & Solution",
+    "description": "Modern full-stack development is 90% repetitive setup and 10% actual coding. Starting a new project is like navigating a maze of configuration files, database connection strings, and boilerplate code.",
+    "solution": "FullstackAgent is a powerful orchestration platform that eliminates all setup friction. With one click, you get a complete, isolated development environment with your AI engineer already logged in and ready to receive your instructions, with built-in Next.js, PostgreSQL, and shadcn/ui."
+  },
+  "demo": {
+    "title": "Meet Your New Way of Coding: The Terminal.",
+    "subtitle": "You don't need an IDE. Your only interface is a web terminal where you directly converse with your Claude Code AI engineer.",
+    "steps": {
+      "1": "User types natural language prompt in terminal (e.g., 'Implement GitHub login with NextAuth').",
+      "2": "AI responds with files it's creating.",
+      "3": "Code is fully generated.",
+      "4": "User runs npm run dev and opens the app in a new browser tab, showing the feature successfully implemented."
+    }
+  },
+  "features": {
+    "title": "Every Launch Is a Production-Ready Environment.",
+    "subtitle": "FullstackAgent is not just an AI. It's a fully orchestrated platform that handles the entire lifecycle from development to deployment.",
+    "items": {
+      "database": {
+        "title": "Instant, Isolated PostgreSQL",
+        "description": "Each sandbox gets an automatically configured dedicated, isolated PostgreSQL database instance using KubeBlocks. DATABASE_URL is securely injected into your environment. No manual database setup required."
+      },
+      "https": {
+        "title": "Automatic HTTPS Endpoints",
+        "description": "Test and share your work instantly. FullstackAgent automatically assigns and manages publicly accessible subdomains with full HTTPS/SSL certificates, mapped directly to your app ports (e.g., 3000, 5000, 8080)."
+      },
+      "aiAware": {
+        "title": "AI-Aware Business Configuration",
+        "description": "Our 'secret sauce'. You can provide business-specific configurations (like GitHub OAuth keys or payment APIs) to the platform. The AI uses these as 'context hints' to intelligently implement features with your real keys (like configuring NextAuth), not generic placeholders."
+      },
+      "preConfigured": {
+        "title": "Pre-configured AI Environment",
+        "description": "Sandboxes come with Next.js, shadcn/ui, and Claude Code CLI pre-installed. All required AI environment variables (like BASE_URL, KEY) are already configured—the AI can start coding immediately."
+      },
+      "github": {
+        "title": "Seamless GitHub Integration",
+        "description": "Connect your sandbox to external GitHub repositories for standard version control, collaboration, and CI/CD workflows. The AI's work integrates into your existing Git flow."
+      },
+      "k8s": {
+        "title": "Automated K8s Deployment",
+        "description": "One-click deployment from development sandbox to highly available production environment. The platform leverages underlying Kubernetes infrastructure, abstracting deployment complexity for you."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Built on Cloud-Native, AI-First Architecture",
+    "subtitle": "FullstackAgent runs as an intelligent orchestration layer on Kubernetes, seamlessly connecting user prompts to fully configured infrastructure.",
+    "steps": {
+      "1": {
+        "title": "Launch (Web Browser)",
+        "description": "User requests a new sandbox through FullstackAgent's web interface."
+      },
+      "2": {
+        "title": "Configure (Kubernetes Cluster)",
+        "description": "FullstackAgent instructs Kubernetes to spin up a new Sandbox Pod (containing Claude Code CLI & Next.js) and a new PostgreSQL Pod (managed by KubeBlocks). All environment variables (DATABASE_URL, KEY, etc.) are securely injected."
+      },
+      "3": {
+        "title": "Instruct (Web Terminal)",
+        "description": "User sends natural language instructions via ttyd web terminal (e.g., 'Build a user login page'). Claude Code AI writes code and saves it to the Pod's filesystem."
+      },
+      "4": {
+        "title": "Deliver (Ingress Domain)",
+        "description": "Ingress controller automatically exposes the app's port (e.g., 3000) on a public HTTPS subdomain for immediate testing."
+      }
+    },
+    "techStack": "Core Technology Stack: Kubernetes | Next.js | PostgreSQL | Sealos | Anthropic Claude | shadcn/ui | ttyd"
+  },
+  "community": {
+    "title": "Open Source, Community-Driven, Waiting for You to Join.",
+    "subtitle": "FullstackAgent itself is 100% coded by Claude Code.",
+    "description": "FullstackAgent is open source under the MIT License. We're building the future of development tools in the open, and we need your help.",
+    "cta": {
+      "github": "Star on GitHub",
+      "start": "Start Free",
+      "contribute": "Contribute"
+    }
+  }
+}
