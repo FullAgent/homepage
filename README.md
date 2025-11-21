@@ -1,37 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fulling - Official Website
 
-## Getting Started
+![License](https://img.shields.io/badge/license-MIT-green)
+![React](https://img.shields.io/badge/react-19.2.0-blue)
+![Vite](https://img.shields.io/badge/vite-6.2.0-purple)
+![TypeScript](https://img.shields.io/badge/typescript-5.8.2-blue)
 
-First, run the development server:
+This repository contains the source code for the **official landing page** of Fulling, a next-generation cloud development platform. The website showcases the product's "Terminal Is All You Need" philosophy through a high-performance, retro-futuristic terminal aesthetic.
+
+## ✨ Features
+
+- **Immersive Terminal UI**: A custom-designed interface that mimics a high-end terminal environment with strict right angles and monospaced typography.
+- **Reactive Animations**: Smooth, performance-optimized animations using Framer Motion.
+- **Modern Tech Stack**: Built with the latest React 19 and Vite for blazing fast performance.
+- **Responsive Design**: Fully responsive layout that maintains the terminal aesthetic across all devices.
+- **No-Nonsense Workflow**: A clean, developer-focused presentation of the product's value proposition.
+
+## 🛠️ Tech Stack
+
+- **Core**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Custom CSS with [Tailwind CSS](https://tailwindcss.com/) utility support
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+## 🚀 Getting Started
+
+Follow these steps to get the project running on your local machine.
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/fulling-landing-page.git
+   cd fulling-landing-page
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at `http://localhost:5173`.
+
+### Building for Production
+
+To create a production-ready build:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To preview the production build locally:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run preview
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+```
+├── src/
+│   ├── components/    # UI Components (Hero, Navigation, etc.)
+│   ├── App.tsx        # Main Application Component
+│   ├── index.css      # Global Styles & Tailwind Imports
+│   └── main.tsx       # Entry Point
+├── public/            # Static Assets
+└── package.json       # Project Dependencies & Scripts
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project uses a hybrid styling approach. While Tailwind CSS is available, significant styling is handled via custom CSS in `index.html` and `index.css` to enforce the strict "terminal" aesthetic (e.g., custom scrollbars, scanlines, and glow effects).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# homepage
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
