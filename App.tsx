@@ -16,10 +16,10 @@ export default function App() {
         <Navigation />
         <main>
           <Hero />
+          <HowItWorks />
           <TechStack />
           <Workflow />
           <Production />
-          <HowItWorks />
         </main>
         <Footer />
       </div>

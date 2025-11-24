@@ -7,13 +7,13 @@ export const Production = () => {
 
   return (
     <section className="section" style={{ background: '#080808' }}>
-      <div className="container-custom">
+      <div className="container-custom" style={{ textAlign: 'center' }}>
         <div style={{ textAlign: 'center', marginBottom: '80px' }}>
            <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>{t.production.header}</h2>
-           <p style={{ color: '#888', fontSize: '1.2rem' }}>{t.production.subtitle}</p>
+           <p style={{ color: '#888', fontSize: '1.2rem', margin: '0 auto', maxWidth: '600px' }}>{t.production.subtitle}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px', justifyItems: 'center' }}>
            <div className="terminal-box">
              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
                 <div style={{ padding: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border)' }}>

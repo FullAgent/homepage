@@ -66,7 +66,7 @@ const translations: Record<Language, Translations> = {
       ifList: [
         "> Live in the terminal",
         "> Crave minimalism",
-        "> Demand ruthless efficiency"
+        "> Hate Deploy"
       ],
       subtitle: "Fulling is the AI-native full-stack platform built for shipping.",
       description: "We provide a production-grade environment with Claude Code, PostgreSQL, Next.js, and shadcn/ui pre-wired. Auth and Payments are baked in—not bolted on.",
@@ -158,7 +158,7 @@ const translations: Record<Language, Translations> = {
       ifList: [
         "> 热爱终端",
         "> 喜欢极简风",
-        "> 追求极致高效"
+        "> 不需要部署"
       ],
       subtitle: "Fulling 是一个专为构建生产级别 Web 应用而设计的 AI 全栈编码平台。",
       description: "内置 claude code/pgsql/next.js/shadcn 开箱即用，自动处理鉴权与支付。",

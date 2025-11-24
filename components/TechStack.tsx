@@ -26,18 +26,18 @@ export const TechStack = () => {
   
   return (
     <section className="section">
-      <div className="container-custom">
+      <div className="container-custom" style={{ textAlign: 'center' }}>
         <div style={{ marginBottom: '80px' }}>
            <h2 style={{ fontSize: '3rem', marginBottom: '16px' }}>{t.stack.header}</h2>
-           <p style={{ color: '#888', maxWidth: '600px', fontSize: '1.2rem' }}>
+           <p style={{ color: '#888', maxWidth: '600px', fontSize: '1.2rem', margin: '0 auto' }}>
              {t.stack.subtitle}
            </p>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '24px' 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '24px'
         }}>
           {t.stack.items.map((item, index) => (
             <TechCard 

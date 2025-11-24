@@ -31,16 +31,17 @@ export const Workflow = () => {
   return (
     <section className="section">
       <div className="container-custom">
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '60px' }}>
-           <div style={{ borderLeft: '4px solid var(--primary)', paddingLeft: '24px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '60px', alignItems: 'center', textAlign: 'center' }}>
+           <div style={{ borderLeft: '4px solid var(--primary)', paddingLeft: '24px', width: '100%', maxWidth: '800px' }}>
              <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>{t.workflow.header}</h2>
              <p style={{ color: '#888', fontSize: '1.2rem' }}>{t.workflow.subtitle}</p>
            </div>
 
-           <div style={{ 
-             display: 'grid', 
-             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-             gap: '48px' 
+           <div style={{
+             display: 'grid',
+             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+             gap: '48px',
+             width: '100%'
            }}>
              {t.workflow.steps.map((step, index) => (
                <Step 
