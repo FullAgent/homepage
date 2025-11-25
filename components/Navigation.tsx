@@ -2,11 +2,7 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 
 export const Navigation = () => {
-  const { t, language, setLanguage } = useLanguage();
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'zh' : 'en');
-  };
+  const { t } = useLanguage();
 
   return (
     <nav className="nav-container">
@@ -17,19 +13,6 @@ export const Navigation = () => {
         </div>
 
         <div className="flex-center">
-          <button
-            onClick={toggleLanguage}
-            className="nav-link"
-            style={{
-              background: 'transparent',
-              border: 'none',
-              cursor: 'pointer',
-              fontFamily: 'inherit',
-              marginRight: '16px'
-            }}
-          >
-            [{language === 'en' ? 'CN' : 'EN'}]
-          </button>
           <a
             href="https://github.com/fullstackagent/fulling"
             className="nav-link"

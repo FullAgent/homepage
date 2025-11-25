@@ -6,11 +6,7 @@ import { MatrixBackground } from './components/MatrixBackground';
 import { Github, Terminal } from 'lucide-react';
 
 const DashboardHeader = () => {
-  const { t, language, setLanguage } = useLanguage();
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'zh' : 'en');
-  };
+  const { t } = useLanguage();
 
   return (
     <header className="dashboard-header justify-between">
@@ -27,13 +23,6 @@ const DashboardHeader = () => {
       </div>
 
       <div className="flex items-center gap-4">
-        <button
-          onClick={toggleLanguage}
-          className="text-sm font-mono text-dim hover:text-primary transition-colors"
-        >
-          [{language === 'en' ? 'CN' : 'EN'}]
-        </button>
-
         <a
           href="https://github.com/fullstackagent/fulling"
           target="_blank"
