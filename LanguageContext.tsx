@@ -61,7 +61,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       slogan: "> VIBE CODING_",
-      title: <>The Cloud Development <br /> Platform for Purists.</>,
+      title: "The Cloud Development Platform for Purists.",
       ifYou: "IF (YOU):",
       ifList: [
         "> Live in the terminal",
@@ -69,7 +69,7 @@ const translations: Record<Language, Translations> = {
         "> Hate Deploy"
       ],
       subtitle: "Fulling is the AI-native full-stack platform built for shipping.",
-      description: "We provide a production-grade environment with Claude Code, PostgreSQL, Next.js, and shadcn/ui pre-wired. Auth and Payments are baked in—not bolted on.",
+      description: "We provide a production-grade environment with Claude Code, PostgreSQL, Next.js, and shadcn/ui pre-wired.",
       philosophy: [
         "Terminal is all you need",
         "Production-grade architecture",

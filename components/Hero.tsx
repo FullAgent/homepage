@@ -43,7 +43,7 @@ const TerminalSimulator = ({ compact = false }: { compact?: boolean }) => {
         width: '100%',
         maxWidth: compact ? '100%' : '500px',
         height: compact ? '140px' : '200px',
-        margin: compact ? '20px auto' : '40px auto',
+        margin: compact ? '10px auto' : '40px auto',
         textAlign: 'left',
         fontFamily: 'monospace',
         fontSize: compact ? '0.8rem' : '0.9rem',
@@ -87,26 +87,17 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-           <div className="hero-tagline" style={{ justifyContent: 'center', marginBottom: compact ? '16px' : '32px' }}>
-             <span className="blink">&gt;</span> {t.hero.slogan}
-           </div>
+           {!compact && (
+             <div className="hero-tagline" style={{ justifyContent: 'center', marginBottom: '32px' }}>
+               <span className="blink">&gt;</span> {t.hero.slogan}
+             </div>
+           )}
+           {!compact && (
+            <h1 className="display-text" style={{ maxWidth: '900px', lineHeight: '1', marginBottom: '32px' }}>
+              {t.hero.title}
+            </h1>
+           )}
         </motion.div>
-
-        <motion.h1
-          className="display-text glitch-text"
-          data-text={t.hero.title}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          style={{
-            maxWidth: '900px',
-            lineHeight: '1',
-            fontSize: compact ? 'clamp(2rem, 4vw, 3.5rem)' : undefined,
-            marginBottom: compact ? '16px' : '32px'
-          }}
-        >
-          {t.hero.title}
-        </motion.h1>
 
         <motion.p
           className="subtitle"
@@ -131,6 +122,38 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
             <TerminalSimulator compact={compact} />
         </motion.div>
 
+        {compact && (
+           <motion.div
+             initial={{ opacity: 0, scale: 0.95 }}
+             animate={{ opacity: 1, scale: 1 }}
+             transition={{ delay: 0.7 }}
+             style={{
+               width: '100%',
+               maxWidth: '90%',
+               marginTop: '4px'
+             }}
+           >
+             <div className="flex items-start justify-between mb-1 border-b border-border pb-1 pl-6 pr-6">
+               <div>
+                 <div className="text-base font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+                   <span className="w-2 h-2 bg-primary rounded-full"></span>
+                   System Architecture
+                 </div>
+                 <div className="text-xs text-dim mt-0.5">Kubernetes-native implementation with isolated sandboxes</div>
+               </div>
+               <div className="text-[10px] font-mono text-dim pt-1">ARCH_V2.0</div>
+             </div>
+
+             <div style={{
+               border: '1px solid var(--border)',
+               padding: '2px',
+               background: 'rgba(255,255,255,0.03)'
+             }}>
+               <img src="/fulling-frame.jpg" alt="Architecture" style={{ width: '100%', height: 'auto', display: 'block' }} />
+             </div>
+           </motion.div>
+        )}
+
         {!compact && (
           <motion.div
             className="mb-12"
@@ -144,21 +167,6 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
             <FeatureItem icon={Layers} title={t.hero.philosophy[2]} delay={1.0} />
           </motion.div>
         )}
-
-        <motion.div
-          className="gap-6"
-          style={{ display: 'flex', justifyContent: 'center' }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.1 }}
-        >
-          <a href="https://bja.sealos.run/?openapp=system-fulling" className="btn-primary">
-            {t.hero.ctaStart} <ArrowRight size={16} style={{ display: 'inline', verticalAlign: 'middle', marginLeft: '8px' }}/>
-          </a>
-          <a href="https://github.com/fullstackagent/fulling" className="btn-secondary">
-            {t.hero.ctaGithub}
-          </a>
-        </motion.div>
 
       </div>
     </section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Hero } from './components/Hero';
-import { TechStackWidget, ProductionWidget, WorkflowWidget, HowItWorksWidget } from './components/DashboardWidgets';
+import { TechStackWidget, ProductionWidget, WorkflowWidget, FeaturesWidget } from './components/DashboardWidgets';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { MatrixBackground } from './components/MatrixBackground';
 import { Github, Terminal } from 'lucide-react';
@@ -20,6 +20,10 @@ const DashboardHeader = () => {
         <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 border border-primary/20 ml-2 hidden sm:inline-block">
           v2.0.0-alpha
         </span>
+      </div>
+
+      <div className="absolute left-1/2 transform -translate-x-1/2 font-bold tracking-tight text-xl hidden md:block text-fg whitespace-nowrap">
+        {t.hero.title}
       </div>
 
       <div className="flex items-center gap-4">
@@ -110,7 +114,7 @@ const Dashboard = () => {
           <WorkflowWidget />
         </div>
         <div className="h-2/5 relative overflow-hidden">
-          <HowItWorksWidget />
+          <FeaturesWidget />
         </div>
       </div>
 

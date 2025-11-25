@@ -91,27 +91,26 @@ export const WorkflowWidget = () => {
   );
 };
 
-export const HowItWorksWidget = () => {
+export const FeaturesWidget = () => {
   const { t } = useLanguage();
+  const features = [
+    { icon: Terminal, text: "Terminal is all you need", color: "#00ff41" },
+    { icon: Layout, text: "Production-grade architecture", color: "#00ff41" },
+    { icon: Server, text: "Full-stack focus", color: "#00ff41" }
+  ];
 
   return (
     <div className="h-full flex flex-col border-t border-border">
-      <PanelHeader title={t.howItWorks.header.replace('## ', '')} />
-      <div className="flex-1 p-4 flex flex-col">
-        <div className="flex-1 relative overflow-hidden group border border-border bg-black/40">
-          <img
-            src="/fulling-frame.jpg"
-            alt="Architecture"
-            className="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity duration-500"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-          <div className="absolute bottom-0 left-0 p-3 w-full">
-            <div className="text-xs font-bold text-white mb-1">System Architecture</div>
-            <div className="text-[10px] text-gray-400 leading-tight line-clamp-3">
-              {t.howItWorks.desc}
+      <PanelHeader title="CORE_PHILOSOPHY" />
+      <div className="flex-1 p-4 flex flex-col justify-center space-y-4">
+        {features.map((feat, index) => (
+          <div key={index} className="flex items-center gap-3 p-2 border border-transparent hover:border-primary/20 bg-surface hover:bg-primary/5 transition-all">
+            <div className="p-2 bg-primary/10 rounded-none">
+              <feat.icon size={18} className="text-primary" />
             </div>
+            <span className="font-bold text-sm text-fg tracking-wide uppercase">{feat.text}</span>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
