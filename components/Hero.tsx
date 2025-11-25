@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Terminal, Zap, Layers } from 'lucide-react';
+import { ArrowRight, Terminal, Zap, Layers, Activity } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const FeatureItem = ({ icon: Icon, title, delay }: { icon: any, title: string, delay: number }) => (
@@ -74,7 +74,7 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
     <section className={`section hero-section ${compact ? 'dashboard-hero' : ''}`} style={{
       justifyContent: 'center',
       textAlign: 'center',
-      paddingTop: compact ? '0' : '160px',
+      paddingTop: compact ? '100px' : '160px',
       height: '100%',
       display: 'flex',
       flexDirection: 'column',
@@ -107,7 +107,8 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
           style={{
             maxWidth: '700px',
             margin: compact ? '0 auto 16px' : '0 auto 32px',
-            fontSize: compact ? '0.95rem' : '1.25rem'
+            fontSize: compact ? '0.95rem' : '1.25rem',
+            color: '#ffffff'
           }}
         >
           {t.hero.description}
@@ -117,7 +118,7 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            style={{ width: '100%', marginBottom: compact ? '16px' : '0' }}
+            style={{ width: '100%', marginBottom: compact ? '8px' : '0' }}
         >
             <TerminalSimulator compact={compact} />
         </motion.div>
@@ -130,13 +131,13 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
              style={{
                width: '100%',
                maxWidth: '90%',
-               marginTop: '4px'
+               marginTop: '0px'
              }}
            >
-             <div className="flex items-start justify-between mb-1 border-b border-border pb-1 pl-6 pr-6">
+             <div className="flex items-start justify-between mb-1 border-b border-border pb-1 pl-0 pr-1">
                <div>
                  <div className="text-base font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                   <span className="w-2 h-2 bg-primary rounded-full"></span>
+                   <Activity size={16} className="text-primary" />
                    System Architecture
                  </div>
                  <div className="text-xs text-dim mt-0.5">Kubernetes-native implementation with isolated sandboxes</div>
@@ -150,6 +151,43 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
                background: 'rgba(255,255,255,0.03)'
              }}>
                <img src="/fulling-frame.jpg" alt="Architecture" style={{ width: '100%', height: 'auto', display: 'block' }} />
+             </div>
+
+             <div className="mt-3 border-t border-border -mx-[1px] pt-3 px-[1px]">
+               <div className="flex items-center gap-2 mb-2 px-1">
+                 <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                 <div className="text-xs font-bold text-dim uppercase tracking-wider">Pricing</div>
+               </div>
+
+               <div className="grid grid-cols-3 gap-2">
+                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm">
+                   <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Starter</div>
+                   <div className="flex flex-col items-center justify-center leading-tight mb-1">
+                     <span className="text-[9px] text-dim/60 line-through">$34/mo</span>
+                     <span className="text-lg font-bold text-primary">$7<span className="text-xs font-normal opacity-70">/mo</span></span>
+                   </div>
+                   <div className="text-[10px] text-white font-mono border-t border-border/30 pt-1 mt-1">2vCPU 2G RAM</div>
+                 </div>
+
+                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm relative overflow-hidden">
+                   <div className="absolute top-0 right-0 w-2 h-2 bg-primary/20 rounded-bl-md"></div>
+                   <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Hobby</div>
+                   <div className="flex flex-col items-center justify-center leading-tight mb-1">
+                     <span className="text-[9px] text-dim/60 line-through">$70/mo</span>
+                     <span className="text-lg font-bold text-primary">$25<span className="text-xs font-normal opacity-70">/mo</span></span>
+                   </div>
+                   <div className="text-[10px] text-white font-mono border-t border-border/30 pt-1 mt-1">4vCPU 4G RAM</div>
+                 </div>
+
+                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm">
+                   <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Pro</div>
+                   <div className="flex flex-col items-center justify-center leading-tight mb-1">
+                     <span className="text-[9px] text-transparent select-none">.</span>
+                     <span className="text-lg font-bold text-primary">$512<span className="text-xs font-normal opacity-70">/mo</span></span>
+                   </div>
+                   <div className="text-[10px] text-white font-mono border-t border-border/30 pt-1 mt-1">16vCPU 32G RAM</div>
+                 </div>
+               </div>
              </div>
            </motion.div>
         )}
