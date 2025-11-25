@@ -145,7 +145,9 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
                <div className="text-[10px] font-mono text-dim pt-1">ARCH_V2.0</div>
              </div>
 
-             <div style={{
+             <div
+               className="transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer"
+               style={{
                border: '1px solid var(--border)',
                padding: '2px',
                background: 'rgba(255,255,255,0.03)'
@@ -160,7 +162,7 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
                </div>
 
                <div className="grid grid-cols-3 gap-2">
-                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm">
+                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer">
                    <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Starter</div>
                    <div className="flex flex-col items-center justify-center leading-tight mb-1">
                      <span className="text-[9px] text-dim/60 line-through">$34/mo</span>
@@ -169,7 +171,7 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
                    <div className="text-[10px] text-white font-mono border-t border-border/30 pt-1 mt-1">2vCPU 2G RAM</div>
                  </div>
 
-                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm relative overflow-hidden">
+                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm relative overflow-hidden transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer">
                    <div className="absolute top-0 right-0 w-2 h-2 bg-primary/20 rounded-bl-md"></div>
                    <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Hobby</div>
                    <div className="flex flex-col items-center justify-center leading-tight mb-1">
@@ -179,7 +181,7 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
                    <div className="text-[10px] text-white font-mono border-t border-border/30 pt-1 mt-1">4vCPU 4G RAM</div>
                  </div>
 
-                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm">
+                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer">
                    <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Pro</div>
                    <div className="flex flex-col items-center justify-center leading-tight mb-1">
                      <span className="text-[9px] text-transparent select-none">.</span>
