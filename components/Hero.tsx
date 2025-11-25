@@ -74,13 +74,14 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
     <section className={`section hero-section ${compact ? 'dashboard-hero' : ''}`} style={{
       justifyContent: 'center',
       textAlign: 'center',
-      paddingTop: compact ? '100px' : '160px',
-      height: '100%',
+      paddingTop: compact ? '0' : '160px', // compact 时不需要 padding-top
+      height: 'auto',
       display: 'flex',
       flexDirection: 'column',
-      borderBottom: 'none'
+      borderBottom: 'none',
+      flex: '1', // 填充父容器
     }}>
-      <div className={`container-custom ${compact ? 'p-0' : ''}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', height: '100%', justifyContent: 'center' }}>
+      <div className={`container-custom ${compact ? 'p-0' : ''}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', justifyContent: 'center', flex: '1' }}>
 
         <motion.div
           initial={{ opacity: 0 }}

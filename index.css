@@ -363,10 +363,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Specific */
 .hero-section {
-  min-height: 90vh;
+  min-height: auto; /* 移除固定像素高度 */
+  height: auto; /* 使用自动高度 */
   display: flex;
-  align-items: center;
-  padding-top: 120px;
+  align-items: stretch; /* 延伸所有子元素拉伸 */
+  padding-top: 0; /* 在最内层可能影响，移到容器或子元素上 */
+  flex: 1; /* 填充父容器的剩余空间 */
 }
 
 .hero-tagline {
@@ -518,12 +520,12 @@ h1, h2, h3, h4, h5, h6 {
 .dashboard-grid {
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 60px 1fr 40px; /* Header, Content, Footer */
-  height: 100vh;
+  grid-template-rows: 60px minmax(0, 1fr) 40px; /* Header, Content, Footer */
+  min-height: 100vh; /* 改为最小高度而不是固定高度 */
   width: 100vw;
   background: var(--border); /* Gap color */
   gap: 1px;
-  overflow: hidden;
+  overflow: hidden; /* 防止整体溢出，但允许中间面板内部滚动 */
 }
 
 /* Mobile Layout (Stack) */
@@ -571,7 +573,10 @@ h1, h2, h3, h4, h5, h6 {
 .dashboard-panel {
   background: var(--surface);
   position: relative;
-  overflow: hidden;
+  overflow-y: auto; /* Allow vertical scrolling */
+  height: 100%; /* Fill the grid cell */
+  display: flex; /* 添加 flex 以便内容能够正确填充 */
+  flex-direction: column; /* 垂直方向堆叠 */
 }
 
 /* Custom Scrollbar for panels */
@@ -585,4 +590,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .dashboard-hero .hero-tagline {
   margin-bottom: 16px;
+}
+
+/* 确保 dashboard-hero 容器正确工作 */
+.dashboard-hero {
+  flex: 1; /* 填充面板的剩余空间 */
+  height: 100%; /* 完全填充父容器 */
+  display: flex; /* 确保 flex 布局 */
+  flex-direction: column; /* 垂直方向 */
+  justify-content: center; /* 居中内容 */
+  padding: 0; /* 移除内边距 */
 }

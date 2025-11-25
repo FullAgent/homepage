@@ -103,8 +103,10 @@ const Dashboard = () => {
         {/* Grid overlay for the center panel */}
         <div className="grid-bg opacity-30"></div>
 
-        <div className="relative z-10 h-full w-full overflow-y-auto custom-scrollbar">
-          <Hero compact={true} />
+        <div className="relative z-10 flex flex-col h-full w-full overflow-y-auto custom-scrollbar">
+          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Hero compact={true} />
+          </div>
         </div>
       </div>
 
