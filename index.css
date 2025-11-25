@@ -14,7 +14,7 @@
 
 * {
   box-sizing: border-box;
-  border-radius: 0px !important; /* STRICT RIGHT ANGLES */
+  border-radius: 0px; /* STRICT RIGHT ANGLES */
 }
 
 html, body {
@@ -47,6 +47,16 @@ body {
 ::selection {
   background: var(--primary);
   color: var(--bg);
+}
+
+/* Blink Animation */
+@keyframes blinker {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blinker 1s step-end infinite;
 }
 
 /* Layout Utilities */

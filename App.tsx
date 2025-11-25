@@ -47,7 +47,7 @@ const DashboardHeader = () => {
           href="https://bja.sealos.run/?openapp=system-fulling"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 px-3 py-1.5 text-xs font-bold uppercase transition-all"
+          className="flex items-center gap-2 bg-primary/10 hover:bg-primary text-primary hover:text-bg border border-primary/30 hover:!border hover:!border-primary px-3 py-1.5 text-xs font-bold uppercase transition-all duration-200 hover:shadow-[0_0_15px_rgba(0,255,65,0.3)]"
         >
           <Terminal size={14} />
           <span className="hidden sm:inline">{t.nav.startCoding.replace('[ ', '').replace(' ]', '')}</span>

@@ -38,7 +38,7 @@ const TerminalSimulator = ({ compact = false }: { compact?: boolean }) => {
 
   return (
     <div
-      className="terminal-box"
+      className="terminal-box group"
       style={{
         width: '100%',
         maxWidth: compact ? '100%' : '500px',
@@ -58,7 +58,7 @@ const TerminalSimulator = ({ compact = false }: { compact?: boolean }) => {
         <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#27c93f' }}></div>
       </div>
       {lines.map((line, i) => (
-        <div key={i} style={{ marginBottom: '4px', color: line.includes('Hate') ? 'var(--primary)' : '#888' }}>
+        <div key={i} style={{ marginBottom: '4px' }} className={`transition-colors ${line.includes('Hate') ? 'text-primary' : 'text-[#888] group-hover:text-white'}`}>
           {line}
         </div>
       ))}
@@ -147,43 +147,45 @@ export const Hero = ({ compact = false }: { compact?: boolean }) => {
              </div>
 
              <div
-               className="transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer"
+               className="transition-all duration-300 hover:!border-primary group cursor-pointer"
                style={{
-               border: '1px solid var(--border)',
-               padding: '2px',
+               border: '2px solid var(--border)',
+               padding: '4px',
                background: 'rgba(255,255,255,0.03)'
              }}>
-               <img src="/fulling-frame.jpg" alt="Architecture" style={{ width: '100%', height: 'auto', display: 'block' }} />
+               <div className="transition-all duration-300 group-hover:!border group-hover:!border-primary group-hover:shadow-[0_0_20px_rgba(0,255,65,0.25)]" style={{ border: '2px solid transparent' }}>
+                 <img src="/fulling-frame.jpg" alt="Architecture" style={{ width: '100%', height: 'auto', display: 'block', transition: 'transform 0.3s ease' }} className="group-hover:scale-[1.01]" />
+               </div>
              </div>
 
              <div className="mt-3 border-t border-border -mx-[1px] pt-3 px-[1px]">
                <div className="flex items-center gap-2 mb-2 px-1">
                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                 <div className="text-xs font-bold text-dim uppercase tracking-wider">Pricing</div>
+                 <div className="text-xs font-bold text-dim uppercase tracking-wider">resource pricing</div>
                </div>
 
                <div className="grid grid-cols-3 gap-2">
-                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer">
-                   <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Starter</div>
+                 <div className="group border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm transition-all duration-300 hover:!border hover:!border-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(0,255,65,0.15)] cursor-pointer">
+                   <div className="text-[10px] text-dim group-hover:text-white transition-colors uppercase mb-0.5 font-semibold">Starter</div>
                    <div className="flex flex-col items-center justify-center leading-tight mb-1">
-                     <span className="text-[9px] text-dim/60 line-through">$34/mo</span>
+                     <span className="text-[9px] text-dim/60 group-hover:text-white transition-colors line-through">$34/mo</span>
                      <span className="text-lg font-bold text-primary">$7<span className="text-xs font-normal opacity-70">/mo</span></span>
                    </div>
                    <div className="text-[10px] text-white font-mono border-t border-border/30 pt-1 mt-1">2vCPU 2G RAM</div>
                  </div>
 
-                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm relative overflow-hidden transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer">
+                 <div className="group border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm relative overflow-hidden transition-all duration-300 hover:border hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(0,255,65,0.15)] cursor-pointer">
                    <div className="absolute top-0 right-0 w-2 h-2 bg-primary/20 rounded-bl-md"></div>
-                   <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Hobby</div>
+                   <div className="text-[10px] text-dim group-hover:text-white transition-colors uppercase mb-0.5 font-semibold">Hobby</div>
                    <div className="flex flex-col items-center justify-center leading-tight mb-1">
-                     <span className="text-[9px] text-dim/60 line-through">$70/mo</span>
+                     <span className="text-[9px] text-dim/60 group-hover:text-white transition-colors line-through">$70/mo</span>
                      <span className="text-lg font-bold text-primary">$25<span className="text-xs font-normal opacity-70">/mo</span></span>
                    </div>
                    <div className="text-[10px] text-white font-mono border-t border-border/30 pt-1 mt-1">4vCPU 4G RAM</div>
                  </div>
 
-                 <div className="border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_15px_rgba(0,255,65,0.1)] cursor-pointer">
-                   <div className="text-[10px] text-dim uppercase mb-0.5 font-semibold">Pro</div>
+                 <div className="group border border-border bg-[rgba(10,10,10,0.4)] p-2 text-center rounded-sm transition-all duration-300 hover:!border hover:!border-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(0,255,65,0.15)] cursor-pointer">
+                   <div className="text-[10px] text-dim group-hover:text-white transition-colors uppercase mb-0.5 font-semibold">Pro</div>
                    <div className="flex flex-col items-center justify-center leading-tight mb-1">
                      <span className="text-[9px] text-transparent select-none">.</span>
                      <span className="text-lg font-bold text-primary">$512<span className="text-xs font-normal opacity-70">/mo</span></span>
