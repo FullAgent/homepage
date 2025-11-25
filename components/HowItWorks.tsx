@@ -6,25 +6,20 @@ export const HowItWorks = () => {
 
   return (
     <section className="section">
-      <div className="container-custom" style={{ textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>{t.howItWorks.header}</h2>
-        <div style={{ marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
-            <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', color: 'var(--fg)' }}>{t.howItWorks.title}</h3>
+      <div className="container-custom text-center">
+        <h2 className="section-title mb-6">{t.howItWorks.header}</h2>
+        <div className="mb-12 max-w-3xl mx-auto">
+            <h3 className="mb-4 text-fg text-xl" style={{ fontSize: '1.2rem', color: 'var(--fg)' }}>{t.howItWorks.title}</h3>
             <p style={{ color: '#888', lineHeight: '1.6' }}>
               {t.howItWorks.desc}
             </p>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <div className="how-it-works-img-container">
           <img
             src="/fulling-frame.jpg"
             alt="Fulling System Architecture"
-            style={{
-              maxWidth: '100%',
-              height: 'auto',
-              borderRadius: '8px',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
-            }}
+            className="how-it-works-img"
           />
         </div>
       </div>

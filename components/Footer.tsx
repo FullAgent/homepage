@@ -5,21 +5,20 @@ export const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer style={{ padding: '60px 0', borderTop: '1px solid var(--border)', background: '#020202' }}>
-      <div className="container-custom" style={{ textAlign: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '24px' }}>
+    <footer className="footer">
+      <div className="container-custom">
+        <div className="footer-content">
           <div>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px', justifyContent: 'center' }}>
+             <div className="footer-logo">
                <img src="https://fulling.sealosbja.site/icon.svg" alt="Logo" style={{ width: '24px', opacity: 0.8 }} />
                <span style={{ fontWeight: 'bold', letterSpacing: '-0.02em' }}>FULLING</span>
              </div>
              <p style={{ color: '#666', fontSize: '0.9rem' }}>{t.footer.rights}</p>
           </div>
 
-          <div style={{ display: 'flex', gap: '32px', justifyContent: 'center', flexWrap: 'wrap' }}>
-             <a href="#" className="nav-link" style={{ margin: 0 }}>Twitter</a>
+          <div className="footer-links">
              <a href="https://github.com/fullstackagent/fulling" className="nav-link" style={{ margin: 0 }}>GitHub</a>
-             <a href="https://bja.sealos.run/?openapp=system-fulling" className="nav-link" style={{ margin: 0, color: 'var(--primary)' }}>{t.footer.startNow}</a>
+             <a href="https://bja.sealos.run/?openapp=system-fulling" className="nav-link text-primary" style={{ margin: 0 }}>{t.footer.startNow}</a>
           </div>
         </div>
       </div>

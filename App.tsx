@@ -7,14 +7,18 @@ import { Production } from './components/Production';
 import { HowItWorks } from './components/HowItWorks';
 import { Footer } from './components/Footer';
 import { LanguageProvider } from './LanguageContext';
+import { MatrixBackground } from './components/MatrixBackground';
 
 export default function App() {
   return (
     <LanguageProvider>
       <div className="app-container">
-        <div className="scanline"></div>
+        {/* Visual Effects Layer */}
+        <div className="scanline-overlay crt-flicker"></div>
+        <MatrixBackground />
+
         <Navigation />
-        <main>
+        <main style={{ position: 'relative', zIndex: 1 }}>
           <Hero />
           <HowItWorks />
           <TechStack />
